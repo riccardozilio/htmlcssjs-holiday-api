@@ -1,15 +1,15 @@
 .titolo{
-  height: 20vh;
+  height: 20%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .calendario{
-  height: 80vh;
+  height: 80%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 19px;
+  font-size: 18px;
 }
