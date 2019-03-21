@@ -30,41 +30,42 @@ function getMonthDay(year, month){
     return year;
   }
 
-  // funzione che da il formato della data per mese
+// funzione che da il formato della data per mese
 
-    function humanDataMonth(month){
+  function humanDataMonth(month){
 
-      var mom = moment();
-      // mom.year(year);
-      mom.month(month);
-      // mom.date(day);
-      var month = mom.format("MMMM");
-      return month;
-    }
+    var mom = moment();
+    // mom.year(year);
+    mom.month(month);
+    // mom.date(day);
+    var month = mom.format("MMMM");
+    return month;
+  }
 
 
-    // funzione che da il formato della data per giorno
+// funzione che da il formato della data per giorno
 
-      function humanDataDate(day){
+  function humanDataDate(day){
 
-        var mom = moment();
-        // mom.year(year);
-        // mom.month(month);
-        mom.date(day);
-        var date = mom.format("DD");
-        return date;
-      }
+    var mom = moment();
+    // mom.year(year);
+    // mom.month(month);
+    mom.date(day);
+    var date = mom.format("DD");
+    return date;
+  }
 
-      // funzione che da il formato della data per la macchina
+// funzione che da il formato della data per la macchina
 
-        function machineDate(year, month, day){
+  function machineDate(year, month, day){
 
-          var mom = moment();
-          mom.year(year);
-          mom.month(month);
-          mom.date(day);
-          var machineData = mom.format("YYYY-MM-DD");
-          return machineData;
+    var mom = moment();
+    mom.year(year);
+    mom.month(month);
+    mom.date(day);
+    var machineData = mom.format("YYYY-MM-DD");
+    return machineData;
+  }
 
 
 // funzione di creazione titolo
@@ -118,7 +119,7 @@ function printHolidays(year, month){
     success: function(inData, state){
       if (inData.success == true) {
         var holidays = inData.response;
-        console.log(holidays);
+        addHolidays(holidays);
       }else {
         console.log("comunication error")
       }
@@ -136,7 +137,18 @@ function printHolidays(year, month){
   });
 }
 
+function addHolidays(holidays){
+  for (var i = 0; i < holidays.length; i++) {
+    var holiday =holidays[i];
+    var holidayMachineDate = holiday.date;
+    var holidayName = holiday.name;
 
+    var selettore = "li[data-date='"+ holidayMachineDate +"']";
+
+    var liholidays= $(selettore);
+    liholidays.addClass("red");
+  }
+}
 
 
 
