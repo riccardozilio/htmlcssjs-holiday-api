@@ -8,7 +8,7 @@
   }
 .mesi{
   width: 100%;
-  
+
   display: flex;
   justify-content: space-between;
 
@@ -36,3 +36,104 @@
 .red{
   color: red;
 }
+.titolo{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendario{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.red{
+  color: red;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.left{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01949A;
+}
+.right{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004369;
+
+}
+.container__left{
+  width: 700px;
+  height: 600px;
+  background-color: #004369;
+}
+.title__left{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title__month{
+  color: white;
+}
+.mesi{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.mesi div{
+  width: 175px;
+  height: 166px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__right{
+  width: 700px;
+  height: 600px;
+  background-color: #01949A;
+}
+.giorni{
+  height: 100px;
+  width: 100%;
+  display: flex;
+}
+.giorni__square{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar{
+  height: 500px;
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.square{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;

@@ -15,7 +15,8 @@
 
     <!-- JS: HANDLEBARS template -->
     <script id="day-template" type="text/x-handlebars-template">
-      <li data-date="{{machineData}}">{{ date }} {{month}} {{year}}</li>
+      <!-- <li data-date="{{machineData}}">{{ date }} {{month}} {{year}}</li> -->
+      <div class="square" data-date="{{machineData}}"><span>{{date}}</span></div>
     </script>
 
     <!-- JS: moment.js -->
@@ -32,10 +33,11 @@
 
 
   <body>
-    <div class="titolo">
-
-
-        <h1 class="title__month"></h1>
+    <div class="left">
+      <div class="container__left">
+        <div class="title__left">
+          <h1 class="title__month">Gennaio</h1>
+        </div>
         <div class="mesi">
           <div class="gennaio">
             <span>gennaio</span>
@@ -75,14 +77,42 @@
           </div>
 
         </div>
-      
+      </div>
+    </div>
+    <div class="right">
+      <div class="container__right">
+        <div class="giorni">
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+          <div class="giorni__square">
+            <span>L</span>
+          </div>
+
+        </div>
+        <div class="calendar">
+
+          
+        </div>
+
+      </div>
 
     </div>
-    <div class="calendario">
-      <ul class="contenitore__giorni">
 
-      </ul>
-
-    </div>
   </body>
 </html>

@@ -83,7 +83,7 @@ function printTitle(year, month){
 
 function printDays(year, month){
   var monthDay = getMonthDay(year, month);
-  var daylist = $(".contenitore__giorni");
+  var daylist = $(".calendar");
   var template = $("#day-template").html();
   var compiled = Handlebars.compile(template);
   daylist.html("");
@@ -179,7 +179,7 @@ function init(){
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month)
-
+  
 
 }
  $(document).ready(init);
