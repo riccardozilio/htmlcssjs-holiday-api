@@ -86,7 +86,7 @@ function printDays(year, month){
   var daylist = $(".contenitore__giorni");
   var template = $("#day-template").html();
   var compiled = Handlebars.compile(template);
-
+  daylist.html("");
   for (var day=1; day<=monthDay; day++) {
 
         var templateDate = {
@@ -161,9 +161,21 @@ function addHolidays(holidays){
 
 
 
+
+
+
+
 function init(){
   var year = 2018;
+
   var month = 0;
+  $(".mesi > div").click(function(){
+    month = $(this).index()
+    printTitle(year, month);
+    printDays(year, month);
+    printHolidays(year, month)
+  })
+
   printTitle(year, month);
   printDays(year, month);
   printHolidays(year, month)

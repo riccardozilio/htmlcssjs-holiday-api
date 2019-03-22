@@ -1,13 +1,32 @@
 .titolo{
-  height: 20%;
+  height: 20vh;
   width: 100%;
+
+  background-color: #5373CA;
+  }
+
+  }
+.mesi{
+  width: 100%;
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+
+
+
+
+}
+.mesi div{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  color: white;
+
+
 }
 .calendario{
   height: 80%;
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
